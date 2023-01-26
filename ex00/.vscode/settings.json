@@ -1,0 +1,6 @@
+{
+	"files.associations": {
+		"*.prg": "harbour",
+		"typeinfo": "cpp"
+	}
+}
