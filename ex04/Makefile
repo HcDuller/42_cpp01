@@ -1,10 +1,10 @@
-NAME = HumanFight
+NAME = sifl
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC =	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC =	main.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: clean fclean re

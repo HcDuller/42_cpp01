@@ -1,9 +1,11 @@
-NAME = change it
+NAME = harl
+
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC =	
+SRC =	main.cpp \
+		Harl.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: clean fclean re

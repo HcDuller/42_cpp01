@@ -1,10 +1,11 @@
-NAME = HumanFight
+NAME = harlFilter
 
 CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC =	main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
+SRC =	main.cpp \
+		Harl.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: clean fclean re

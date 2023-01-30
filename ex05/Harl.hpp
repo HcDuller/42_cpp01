@@ -1,29 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   HumanB.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hde-camp <hde-camp@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/26 16:14:44 by hde-camp          #+#    #+#             */
-/*   Updated: 2023/01/26 16:35:10 by hde-camp         ###   ########.fr       */
+/*   Created: 2023/01/27 23:26:02 by hde-camp          #+#    #+#             */
+/*   Updated: 2023/01/30 15:18:18 by hde-camp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "HumanB.hpp"
-#include "Weapon.hpp"
-#include <string>
+#pragma once
 #include <iostream>
+#include <string>
 
-
-HumanB::HumanB(std::string name): weapon(NULL), name(name){};
-HumanB::~HumanB(){};
-void HumanB::attack(){
-	std::cout << this->name << " attacks with their " << this->weapon->getType() << std::endl;
-}
-void HumanB::setWeapon(Weapon& weapon){
-	this->weapon = (Weapon*)&weapon;
-}
-void HumanB::setName(std::string name){
-	this->name = name;
-}
+class Harl
+{
+public:
+	typedef void (Harl::*complainer)(void);
+private:
+	void debug(void);
+	void error(void);
+	void info(void);
+	void warning(void);
+	Harl::complainer fnVector[4];
+	std::string levels[4];
+public:
+	Harl();
+	~Harl();
+	void complain(std::string level);
+};
