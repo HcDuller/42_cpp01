@@ -6,7 +6,7 @@
 /*   By: hde-camp <hde-camp@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 23:26:13 by hde-camp          #+#    #+#             */
-/*   Updated: 2023/01/30 16:30:59 by hde-camp         ###   ########.fr       */
+/*   Updated: 2023/01/30 18:42:37 by hde-camp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,14 @@
 
 Harl::Harl()
 {
-	fnVector[0] = &Harl::debug;
-	fnVector[1] = &Harl::info;
-	fnVector[2] = &Harl::warning;
-	fnVector[3] = &Harl::error;
-	levels[0] = "DEBUG";
-	levels[1] = "INFO";
-	levels[2] = "WARNING";
-	levels[3] = "ERROR";
+	fnVector[0] = &Harl::error;
+	fnVector[1] = &Harl::warning;
+	fnVector[2] = &Harl::info;
+	fnVector[3] = &Harl::debug;
+	levels[0] = "ERROR";
+	levels[1] = "WARNING";
+	levels[2] = "INFO";
+	levels[3] = "DEBUG";
 	complain_capacity = 3;
 }
 Harl::~Harl(){};

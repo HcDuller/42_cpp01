@@ -4,7 +4,8 @@ CC = c++
 
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRC =	main.cpp
+SRC =	main.cpp \
+		sedIsForLoosers.cpp
 OBJ = $(SRC:.cpp=.o)
 
 .PHONY: clean fclean re
@@ -19,6 +20,8 @@ $(OBJ): %.o: %.cpp
 
 clean:
 	rm -rfd $(NAME)
+	rm -rfd *.replace
+	rm -rfd *.diff
 
 fclean: clean
 	rm -rfd $(OBJ)

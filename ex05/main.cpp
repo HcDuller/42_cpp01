@@ -6,7 +6,7 @@
 /*   By: hde-camp <hde-camp@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 14:44:36 by hde-camp          #+#    #+#             */
-/*   Updated: 2023/01/30 15:25:39 by hde-camp         ###   ########.fr       */
+/*   Updated: 2023/01/30 18:39:44 by hde-camp         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@
 int main(void){
 	Harl harl = Harl();
 
-	std::cout << "This should print nothing : ";
+	std::cout << "Calling an invalid level.This should print nothing inside ->[";
 	harl.complain("teste");
-	std::cout << std::endl;
+	std::cout << "]" << std::endl;
 	std::cout << "Call to DEBUG" << std::endl;
 	harl.complain("DEBUG");
 	std::cout << "Call to INFO" << std::endl;
